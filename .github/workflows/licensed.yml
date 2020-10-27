@@ -10,10 +10,11 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    container: node:slim
     name: Check licenses
     steps:
       - uses: actions/checkout@v2
-      - run: npm install --legacy-peer-deps
+      - run: npm install --production
       - name: Install licensed
         run: |
           cd $RUNNER_TEMP
