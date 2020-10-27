@@ -1,7 +1,10 @@
 name: Licensed
 
 on:
-  push: {branches: main, fix-licenses-npm-7}
+  push: 
+    branches: 
+      - main
+      - fix-licenses-npm-7
   pull_request: {branches: main}
 
 jobs:
