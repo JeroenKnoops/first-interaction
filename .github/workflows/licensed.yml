@@ -1,7 +1,7 @@
 name: Licensed
 
 on:
-  push: {branches: main}
+  push: {branches: main, fix-licenses-npm-7}
   pull_request: {branches: main}
 
 jobs:
@@ -10,7 +10,7 @@ jobs:
     name: Check licenses
     steps:
       - uses: actions/checkout@v2
-      - run: npm install
+      - run: npm install --legacy-peer-deps
       - name: Install licensed
         run: |
           cd $RUNNER_TEMP
