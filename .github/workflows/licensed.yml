@@ -11,7 +11,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     name: Check licenses
-    container: node:14.4.0-buster-slim
+    container: node:buster-slim
     steps:
       - uses: actions/checkout@v2
       - run: apt-get update && apt-get install -y curl sudo
